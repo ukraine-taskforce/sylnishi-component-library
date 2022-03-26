@@ -37,9 +37,8 @@ export interface IconFlagProps extends React.SVGProps<SVGSVGElement> {
 }
 
 const IconFlag: FC<IconFlagProps> = ({ alt, iso, rfc, ...props }) => {
-  if (iso == null && rfc == null) return <>Flag not found</>;
   const isoLang = (
-    rfc != null ? RFCToISO[rfc.toLowerCase() as AvailableRFC] : iso?.toLowerCase()
+    rfc ? RFCToISO[rfc.toLowerCase() as AvailableRFC] : iso?.toLowerCase()
   ) as AvailableISO;
 
   switch (isoLang) {

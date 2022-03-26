@@ -36,7 +36,7 @@ StyledButton.defaultProps = { theme: SylnishiTheme };
 
 type ButtonType = "primary" | "secondary" | "outlined" | "transparent" | "alarm";
 type ButtonDisplayType = "block" | "large";
-type ButtonAlignmentType = "centered" | "squeezed" | "start";
+type ButtonAlignmentType = "center" | "squeeze" | "start";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   btnType?: ButtonType;
